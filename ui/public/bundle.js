@@ -973,7 +973,7 @@
   const {Header, Content, Footer} = antd.Layout;
   const App = () => {
     const [offset, setOffset] = react.useState(document.documentElement.clientWidth < 700 ? 1 : 8);
-    const [model, setModel] = react.useState("SkipFSRCNN-MS N");
+    const [model, setModel] = react.useState("SkipFSRCNN-MS N+B");
     const [url, setUrl] = react.useState();
     const [fileList, setFileList] = react.useState();
     const lock = react.useRef(false);
@@ -1042,10 +1042,12 @@
         flexGrow: 1
       }
     }, /* @__PURE__ */ react.default.createElement(Option, {
-      value: "SkipFSRCNN-MS H"
-    }, "SkipFSRCNN-MS H"), /* @__PURE__ */ react.default.createElement(Option, {
+      value: "SkipFSRCNN-MS B"
+    }, "SkipFSRCNN-MS B"), /* @__PURE__ */ react.default.createElement(Option, {
       value: "SkipFSRCNN-MS N"
     }, "SkipFSRCNN-MS N"), /* @__PURE__ */ react.default.createElement(Option, {
+      value: "SkipFSRCNN-MS N+B"
+    }, "SkipFSRCNN-MS N+B"), /* @__PURE__ */ react.default.createElement(Option, {
       value: "CARN-M"
     }, "CARN-M"))), /* @__PURE__ */ react.default.createElement("div", {
       style: {

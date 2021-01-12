@@ -17,8 +17,9 @@ args = parser.parse_args()
 class ModelLoader:
     def __init__(self):
         self.model_file: Dict[str, onnxruntime.InferenceSession] = {}
-        self.model_file['SkipFSRCNN-MS H'] = './SkipFSRCNN-ms-h.onnx'
+        self.model_file['SkipFSRCNN-MS B'] = './SkipFSRCNN-ms-b.onnx'
         self.model_file['SkipFSRCNN-MS N'] = './SkipFSRCNN-ms-n.onnx'
+        self.model_file['SkipFSRCNN-MS N+B'] = './SkipFSRCNN-ms-nb.onnx'
         self.model_file['CARN-M'] = './carn-m-d2-30.onnx'
 
     def new_session(self, model_name: str) -> onnxruntime.InferenceSession:

@@ -13,7 +13,7 @@ const { Option } = Select
 const { Header, Content, Footer } = Layout
 const App = () => {
 	const [offset, setOffset] = useState(document.documentElement.clientWidth < 700 ? 1 : 8)
-	const [model, setModel] = useState('SkipFSRCNN-MS N')
+	const [model, setModel] = useState('SkipFSRCNN-MS N+B')
 	const [url, setUrl] = useState<string>()
 	const [fileList, setFileList] = useState<any[]>()
 	const lock = useRef(false)
@@ -84,8 +84,9 @@ const App = () => {
 									display: 'inline-block',
 									flexGrow: 1
 								}}>
-								<Option value="SkipFSRCNN-MS H">SkipFSRCNN-MS H</Option>
+								<Option value="SkipFSRCNN-MS B">SkipFSRCNN-MS B</Option>
 								<Option value="SkipFSRCNN-MS N">SkipFSRCNN-MS N</Option>
+								<Option value="SkipFSRCNN-MS N+B">SkipFSRCNN-MS N+B</Option>
 								<Option value="CARN-M">CARN-M</Option>
 							</Select>
 						</div>
